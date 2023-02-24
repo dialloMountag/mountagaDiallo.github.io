@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DialloM's Website</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+    
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+    
+                // Store hash
+                var hash = this.hash;
+    
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                scrollTop: $(hash).offset().top
+                }, 800, function(){
+    
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+                });
+            } // End if
+            });
+    
+            // Add class to navbar when the user scrolls down
+            $(window).scroll(function() {
+            if ($(window).scrollTop() > 50) {
+                $('.navbar').addClass('active');
+            } else {
+                $('.navbar').removeClass('active');
+            }
+            });
+    
+            // Scroll to top button functionality
+            $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $('#scroll-to-top').fadeIn();
+            } else {
+                $('#scroll-to-top').fadeOut();
+            }
+            });
+    
+            $('#scroll-to-top').click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+            });
+    
+        });
+    </script>
+</head>
+
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark text-white fixed-top mainNav" id="mainNav">
+        <div class="container">
+        <a class="navbar-brand" href="#">DIALLO MOUNTAGA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive" >
+            <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <header class="masthead" style="background-image: url('https://images.pexels.com/photos/12078533/pexels-photo-12078533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+        <div class="container text-center ">
+          <div class="masthead-subheading">Welcome To My Website!</div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+<section class="page-section" id="about">
+    <div class="container" id="about-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-0">About Me</h2>
+          <hr class="divider my-4">
+          <div id="typing-animation" class="text-monospace font-weight-lighter"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Experience Section -->
+  <section class="page-section mt-5 pt-2" id="experience">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-5">My Experience</h2>
+          <hr class="divider my-4">
+          <p class="text-muted mb-5 text-justify text-dark">As an ambitious electrical engineering student in my second year of studies, I have embarked on a range of exciting projects that have pushed my skills and creativity to new heights. From designing and programming a basic computer to testing it on an FGPPA Altera-DE2 115, to simulating a ice rink in C, I have always sought out challenging opportunities to hone my skills and explore the limitless possibilities of technology.
+            <br>
+            I have also worked on the design of a circuit map that regulates traffic flow with a clever use of traffic lights, implemented on a breadboard. I also developed a web application that simplifies the hotel reservation process, ensuring a seamless user experience. In addition, I programmed a clone of the popular VIM editor, demonstrating my proficiency in software development.
+            Currently, I am working on a mobile development project, where I am leveraging the latest technologies to create innovative solutions. 
+            <br>
+            My passion for electrical engineering and computing technology is a driving force behind everything I do, and I am always eager to explore new ideas and push the boundaries of what is possible. With my strong foundation and diverse range of experiences, I am confident that I have the skills and determination to excel in any challenge that comes my way.</p>
+            <a class="btn btn-outline-info mb-3" href="#projects"> Go to projects section </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Education Section -->
+  <section id="education" class="timeline-section">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Education</h2>
+                <h3 class="section-subheading text-muted">My academic journey so far.</h3>
+                <hr class="divider my-4">
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-lg-12">
+                <ul class="timeline">
+                <li class="timeline-item ">
+                    <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>Year 2</h4>
+                        <p><small class="text-muted"><i class="fas fa-calendar-alt"></i> September 2022 - Present</small></p>
+                        <h4 class="subheading">Bachelor of Electrical Engineering and Computing technology</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">University of Ottawa</p>
+                    </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted timeline-item">
+                    <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>Year 1</h4>
+                        <p><small class="text-muted"><i class="fas fa-calendar-alt"></i> January 2021 - May 2022</small></p>
+                        <h4 class="subheading">Bachelor of Electrical Engineering (Computer Engineering Concentration)</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Université du Québec à Trois-Rivières</p>
+                    </div>
+                    </div>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </section>
+
+  <!-- Skills Section -->
+<section class="page-section" id="skills">
+    <div class="container">
+      <h2 class="text-center mt-0">Skills</h2>
+      <hr class="divider my-4">
+      <div class="row mb-5">
+            <div class="col-lg-4 col-md-6 ">
+            <div class="mt-5">
+                <h3 class="h4 mb-2 text-center">Electronics</h3>
+                <ul>
+                    <li class="text-muted mb-2"> Electrical circuit design, simulation and analysis </li>
+                    <li class="text-muted mb-2 ">FPGA programming (using Altera-DE2 115) </li>
+                    <li class="text-muted mb-2 "> Hardware description languages such as Verilog and VHDL for designing digital circuits</li>
+                    <li class="text-muted mb-2 ">Experience in usign electronic test equipment such as oscilloscopes, function generators and multimeters </li>
+                    <li class="text-muted mb-2 ">Breadboard prototyping</li>
+                    <li class="text-muted mb-2 "> Programming and interfacing microcontrollers, such as Arduino for digital system control and automation </li>
+                </ul>
+            </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+            <div class="mt-5 ">
+                <h3 class="h4 mb-2 text-center">Computing</h3>
+                <ul class="ml-3">
+                    <li class="mb-2"> Programming languages: <span class="text-muted">C/C++, Assembly, Python, MATLAB, VHDL, LABVIEW </span></li>
+                    <li class="mb-2"> Software/IDE :  <span class="text-muted">COMSOL, MultiSim, Altium Designer, Visual Studio, Eclipse, GNU toolchain (GCC, MAKE, GDB),
+                        MATLAB/Simulink. </span></li>
+                    <li class="mb-2"> Web:  <span class="text-muted">HTML, CSS, Bootstrap, PHP (PHPUnit) Laravel, JavaScript.</span></li>
+                    <li class="mb-2"> Networking:  <span class="text-muted"> CCNA (Routing and Switching)</span></li>
+                    <li class="mb-2">   Database management :<span class="text-muted">  SQL, MySQL, SQLite.</span></li>
+                    <li class="mb-2">Operating Systems : <span class="text-muted"> Linux, Windows..</span></li>
+                </ul>
+            </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+            <div class="mt-5">
+                <h3 class="h4 mb-2 text-center">Others</h3>
+                <ul class="ml-3">
+                    <li class="mb-2 text-muted"> Strong communication (English & French)</li>
+                    <li class="mb-2 text-muted"> Professional Engineering Norms Knowledge</li>
+                    <li class="mb-2 text-muted"> Team player with the ability to work collaboratively</li>
+                    <li class="mb-2 text-muted"> Adaptability and willingness to learn</li>
+                </ul>
+            </div>
+            </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- projects Section -->
+<section class="page-section" id="projects">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Projects</h2>
+            <h5 class="section-subheading text-muted">Here are some of my current and past projects.</h3>
+            <hr class="divider my-4">
+        </div>
+        <div class="row mb-5 p-2">
+            <div class="col-lg-6 col-xxl-4 col-sm-12 mb-4">
+                
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://i1.wp.com/techpatio.com/wp-content/uploads/2019/07/coding-development.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Mobile Messaging App</h4>
+                        <ul class="small card-text ">
+                            <li class="hashtag nav-item">#Programming</li>
+                            <li class="hashtag nav-item">#MobileProgamming</li>
+                        </ul>
+                        <p class="card-text">Development of a cross-platform messaging mobile app for a Real estate company.</p>
+                        <p class="status font-weight-bold card-text">Ongoing</p>
+                        <div class="see-more">
+                            <button type="button" class="btn  btn-outline-info btn-block" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                <i class="fas fa-plus fa-3x "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 col-sm-12 mb-4">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://www.terasic.com.tw/attachment/archive/502/image/image_88_thumb.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">BASIC COMPUTER</h4>
+                        <ul class="small card-text ">
+                            <li class="hashtag nav-item">#ComputerArchitecture</li>
+                            <li class="hashtag nav-item">#ComputerDesign</li>
+                            <li class="hashtag nav-item">#AssemblyProgramming</li>
+                        </ul>
+                        <p class="card-text">Design and Programming a basic computer on an FPGA Altera DE2-115 board</p>
+                        <p class="status font-weight-bold card-text">Successuly completed</p>
+                        <div class="see-more">
+                            <button type="button" class="btn  btn-outline-info btn-block" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                <i class="fas fa-plus fa-3x "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>            
+            <div class="col-lg-6 col-xxl-4 col-sm-12 mb-4">   
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://content.instructables.com/FSF/XGF9/IGP0IMB3/FSFXGF9IGP0IMB3.jpg?auto=webp&frame=1&width=1024&height=1024&fit=bounds&md=d1a777aa9ea365654267550691718d02" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Traffic Light Control Circuit</h4>
+                        <ul class="small card-text ">
+                            <li class="hashtag nav-item">#DigitalSytems</li>
+                            <li class="hashtag nav-item">#Electronics</li>
+                        </ul>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                        <p class="status font-weight-bold card-text">Successfully Completed</p>
+                        <div class="see-more">
+                            <button type="button" class="btn  btn-outline-info btn-block" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                <i class="fas fa-plus fa-3x "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 col-sm-12 mb-4">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://cdn.vox-cdn.com/thumbor/naQwWqByDkK8GPFwKGxJniNIBLo=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10287239/109300737.jpg.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Skating Simulator</h4>
+                        <ul class="small card-text ">
+                            <li class="hashtag nav-item">#Cprogramming</li>
+                            <li class="hashtag nav-item">#SimulatorProgamming</li>
+                        </ul>
+                        <p class="card-text">Development of a skating simulator using C programming, which simulate and predict the movements of skaters
+                            based on multiple physical parameters</p>
+                        <p class="status font-weight-bold card-text">Successfully Completed</p>
+                        <div class="see-more">
+                            <button type="button" class="btn  btn-outline-info btn-block" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                <i class="fas fa-plus fa-3x "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div class="col-lg-6 col-xxl-4 col-sm-12 mb-4">   
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://www.maketecheasier.com/assets/uploads/2019/04/how-to-exit-vim-ubuntu-featured-800x400.jpg.webp" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">VIM Editor Clone</h4>
+                        <ul class="small card-text ">
+                            <li class="hashtag nav-item">#Cprogramming</li>
+                            <li class="hashtag nav-item">#VIM</li>
+                        </ul>
+                        <p class="card-text">Development of a VIM clone text editor using C with key features such as search, replace, key mapping. Use of data structures for efficient implementation of theses features.</p>
+                        <p class="status font-weight-bold card-text"> Successfully Completed</p>
+                        <div class="see-more">
+                            <button type="button" class="btn  btn-outline-info btn-block" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                <i class="fas fa-plus fa-3x "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 col-sm-12 mb-4">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Reservation Web App</h4>
+                        <ul class="small card-text ">
+                            <li class="hashtag nav-item">#WebProgramming</li>
+                            <li class="hashtag nav-item">#DBstructure</li>
+                        </ul>
+                        <p class="card-text">Development of web-based reservation system using PHP/Laravel and a DB using MySQL for a hotel to manage reservations and provide real-time availability information to customers.</p>
+                        <p class="status font-weight-bold card-text">Successfully Completed</p>
+                        <div class="see-more">
+                            <button type="button" class="btn  btn-outline-info btn-block" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                <i class="fas fa-plus fa-3x "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>      
+
+<!-- Contact Section -->
+<section class="page-section bg-dark text-white mb-0 " id="contact">
+<div class="container">
+    <div class="row">
+    <div class="col-lg-8 mx-auto text-center">
+        <h2 class="section-heading mt-5 mb-4">Let's Get In Touch!</h2>
+        <p class="mb-5">Ready to start your next project with me? That's great! Give me a call or send me an email and I will get back to you as soon as possible!</p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-4 ml-auto text-center">
+        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+        <div>+1 (819) 979-0500</div>
+    </div>
+    <div class="col-lg-4 mr-auto text-center">
+        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+        <a class="d-block" href="mailto:your-email@your-domain.com">mountaga.diallo1711@gmail.com</a>
+    </div>
+    </div>
+    <div class="social-media-links mt-5 mb-5 col-lg-4 mr-auto text-center ml-auto" style="width: 100% ;">
+        <a href="https://github.com/dialloMountag" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mountaga-diallo-2b4571225/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/Probably0422" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <div class="mt-5 text-center">
+    <span class="copyright">&copy;</span> <br> <span> All rights reserved.</span>
+    </div>
+</div>
+</section>
+
+<button id="scroll-to-top-btn">
+<i class="fa fa-chevron-up"></i>
+</button>
+
+
+<script src="app.js"></script>
+</body>
+  
