@@ -88,12 +88,10 @@ const observer = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
         isVisible =true;
       // Execute your function here
-      console.log('Element is visible!');
       typeWriter();
     }
     else {
         isVisible = false;
-        console.log('Element is not visible');
     }
   });
 });
